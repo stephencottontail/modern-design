@@ -1,0 +1,22 @@
+{
+  "name": "modern-design",
+  "version": "0.1.0",
+  "description": "Brings WordPress into 2019 by introducing a modern web design process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wp",
+    "plugin"
+  ],
+  "author": "Stephen Dickinson <stephencottontail@me.com>",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "autoprefixer": "^9.4.7",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1"
+  }
+}
