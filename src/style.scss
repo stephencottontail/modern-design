@@ -15,6 +15,7 @@
         display: block;
         font-family: $serif;
         font-size: $base-font-size * 1.5;
+        line-height: 1.2;
         text-transform: lowercase;
 
         @media #{$medium} {
@@ -30,6 +31,18 @@
         width: 220px;
         opacity: 0.5;
         z-index: -5;
+    }
+
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999999999;
     }
 
     p {
@@ -179,3 +192,75 @@
     }
 }
 
+.sc-mobile-app {
+    min-height: 35%;
+    width: 90%;
+
+    .sc-modal__title {
+        margin-bottom: $base-spacing;
+    }
+
+    @media #{$medium} {
+        width: 50%;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: $base-spacing;
+    }
+}
+
+.sc-newsletter {
+    min-height: 35%;
+    width: 90%;
+
+    .sc-modal__title {
+        margin-bottom: $base-spacing;
+    }
+
+    .sc-modal__image {
+        height: auto;
+        width: 100%;
+    }
+
+    @media #{$medium} {
+        width: 50%;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: $base-spacing;
+    }
+
+    #reject-newsletter {
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        opacity: 0;
+        z-index: 9999999999;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    form {
+        margin-bottom: $base-spacing;
+
+        label {
+            display: block;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            background-color: $gray-100;
+            border-color: $gray-500;
+            color: $gray-500;
+            font-family: $sans;
+
+            &:focus {
+                background-color: white;
+            }
+        }
+    }
+}

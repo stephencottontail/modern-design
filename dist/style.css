@@ -12,6 +12,7 @@
     display: block;
     font-family: "Eczar";
     font-size: 24px;
+    line-height: 1.2;
     text-transform: lowercase; }
     @media screen and (min-width: 900px) {
       .sc-modal__title {
@@ -24,6 +25,16 @@
     width: 220px;
     opacity: 0.5;
     z-index: -5; }
+  .sc-modal__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999; }
   .sc-modal p {
     margin: 0 0 22.4px 0; }
 
@@ -117,3 +128,50 @@
       background-color: #5b828b; }
     .sc-navigation a:first-of-type {
       padding-left: 0; }
+
+.sc-mobile-app {
+  min-height: 35%;
+  width: 90%; }
+  .sc-mobile-app .sc-modal__title {
+    margin-bottom: 22.4px; }
+  @media screen and (min-width: 900px) {
+    .sc-mobile-app {
+      width: 50%; } }
+  .sc-mobile-app button {
+    width: 100%;
+    margin-bottom: 22.4px; }
+
+.sc-newsletter {
+  min-height: 35%;
+  width: 90%; }
+  .sc-newsletter .sc-modal__title {
+    margin-bottom: 22.4px; }
+  .sc-newsletter .sc-modal__image {
+    height: auto;
+    width: 100%; }
+  @media screen and (min-width: 900px) {
+    .sc-newsletter {
+      width: 50%; } }
+  .sc-newsletter button {
+    width: 100%;
+    margin-bottom: 22.4px; }
+  .sc-newsletter #reject-newsletter {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    opacity: 0;
+    z-index: 9999999999; }
+    .sc-newsletter #reject-newsletter:hover {
+      opacity: 1; }
+  .sc-newsletter form {
+    margin-bottom: 22.4px; }
+    .sc-newsletter form label {
+      display: block; }
+    .sc-newsletter form input[type="email"] {
+      width: 100%;
+      background-color: whitesmoke;
+      border-color: #433d3d;
+      color: #433d3d;
+      font-family: "Poppins"; }
+      .sc-newsletter form input[type="email"]:focus {
+        background-color: white; }
