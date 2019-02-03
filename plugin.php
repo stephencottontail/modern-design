@@ -51,7 +51,7 @@ add_action( 'wp_footer', function() { ?>
 <?php }, 50 );
 
 add_action( 'wp_footer', function() { ?>
-    <div class="sc-modal__wrapper">
+    <div class="sc-modal__wrapper" id="sc-mobile-app-wrapper">
         <div class="sc-modal sc-mobile-app">
             <span class="sc-modal__title">Learn About Our Mobile App?</span>
             <p><strong>Hey!</strong> We now have a mobile app. It's been scientifically proven that using our mobile app instead of our website makes you 18.756% less likely to get scurvy.</p>
@@ -61,10 +61,10 @@ add_action( 'wp_footer', function() { ?>
             </div>
         </div>
     </div>
-<?php }, 60 );
+<?php }, 70 );
 
 add_action( 'wp_footer', function() { ?>
-    <div class="sc-modal__wrapper">
+    <div class="sc-modal__wrapper" id="sc-newsletter-wrapper">
         <div class="sc-modal sc-newsletter">
             <span class="sc-modal__title">Sign Up For Our Newsletter</span>
             <img class="sc-modal__image" src="<?php echo plugins_url( 'img/landscape.png', __FILE__ ); ?>" />
@@ -79,4 +79,4 @@ add_action( 'wp_footer', function() { ?>
             </div>
         </div>
     </div>
-<?php }, 70 );
+<?php }, 60 );
