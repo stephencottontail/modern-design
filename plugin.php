@@ -16,12 +16,36 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 add_action( 'wp_footer', function() { ?>
-   <div class="sc-modal sc-cookies">
-       <img class="sc-modal__image" src="<?php echo plugins_url( 'img/flower.png', __FILE__ ); ?>" />
-       <p><strong>Attention!</strong> This website doesn't just use cookies, it dispatches invisible drones to watch you and your loved ones. If you'd like to learn more about the technology behind these invisible drones, click "Learn More". Otherwise, click "I Understand" to demonstrate that you really don't care whether invisible drones stalk you and your loved ones.</p>
-       <div class="sc-cookies__buttons">
-           <button class="sc-button sc-button__primary sc-button__primary--blue" id="accept-cookies">I Accept!</button>
-           <button class="sc-button sc-button__secondary sc-button__secondary--blue" id="reject-cookies">Learn More</button>
+    <div class="sc-modal sc-cookies">
+        <img class="sc-modal__image" src="<?php echo plugins_url( 'img/flower.png', __FILE__ ); ?>" />
+        <p><strong>Attention!</strong> This website doesn't just use cookies, it dispatches invisible drones to watch you and your loved ones. If you'd like to learn more about the technology behind these invisible drones, click "Learn More". Otherwise, click "I Understand" to demonstrate that you really don't care whether invisible drones stalk you and your loved ones.</p>
+        <div class="sc-cookies__buttons">
+            <button class="sc-button sc-button__primary sc-button__primary--blue" id="accept-cookies">I Accept!</button>
+            <button class="sc-button sc-button__secondary sc-button__secondary--blue" id="reject-cookies">Learn More</button>
         </div>
     </div>
 <?php }, 50 );
+
+add_action( 'wp_head', function() {
+    $phrases = array(
+        'Home',
+        'About',
+        'Mess May Serve Creatives, Or, Do Everything Like Me Or You\'re Not Actually a Creative',
+        'Using Dopamine to Enhance',
+        'Wear the Same Color Every Day to Avoid Decision-Making in the Morning',
+        'Irrelevant Industry Buzzwords',
+        'I Was Unknowingly Aiming For a Goal That Didn\'t Resonate With Me',
+        'More Irrelevant Industry Buzzwords',
+        'Avoiding Decision Fatigue'
+    );
+
+    echo '<div class="sc-modal sc-navigation">'; ?>
+    <span class="sc-modal__title">Modern Design</span>
+    <img class="sc-modal__image" src="<?php echo plugins_url( 'img/smiles.png', __FILE__ ); ?>" />
+    <div class="sc-navigation__links">
+    <?php foreach ( $phrases as $phrase ) {
+        printf( '<a href="%s">%s</a>', 'https://www.apple.com/', $phrase );
+    }
+    echo '</div>';
+    echo '</div>';
+}, 50 );

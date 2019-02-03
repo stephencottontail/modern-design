@@ -8,6 +8,14 @@
   padding: 22.4px;
   text-rendering: optimizeLegibility;
   z-index: 9999999; }
+  .sc-modal__title {
+    display: block;
+    font-family: "Eczar";
+    font-size: 24px;
+    text-transform: lowercase; }
+    @media screen and (min-width: 900px) {
+      .sc-modal__title {
+        font-size: 40px; } }
   .sc-modal__image {
     position: absolute;
     top: 0;
@@ -18,43 +26,6 @@
     z-index: -5; }
   .sc-modal p {
     margin: 0 0 22.4px 0; }
-
-.sc-cookies {
-  bottom: 0;
-  left: 0;
-  width: 100%; }
-  @media screen and (min-width: 900px) {
-    .sc-cookies {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between; }
-      .sc-cookies .sc-modal__image {
-        position: static;
-        opacity: 1; }
-      .sc-cookies__buttons {
-        flex: 1 0 25%;
-        padding-left: 22.4px; }
-        .sc-cookies__buttons button {
-          width: 100%;
-          margin-bottom: 22.4px; } }
-
-.sc-navigation {
-  background-color: #7aa0a8;
-  font-family: "Poppins";
-  font-size: 16px;
-  padding: 22.4px; }
-  .sc-navigation a {
-    color: #dde7e9;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-    padding: 5.6px 11.2px;
-    text-decoration: none; }
-    .sc-navigation a:focus, .sc-navigation a:hover, .sc-navigation a.hover {
-      background-color: #5b828b; }
-    .sc-navigation a:first-of-type {
-      padding-left: 0; }
 
 .sc-button {
   border-width: 2px;
@@ -100,3 +71,49 @@
       color: #7aa0a8; }
     .sc-button__tertiary--red {
       color: #892a32; }
+
+.sc-cookies {
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  @media screen and (min-width: 900px) {
+    .sc-cookies {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      .sc-cookies .sc-modal__image {
+        position: static;
+        opacity: 1; }
+      .sc-cookies__buttons {
+        flex: 1 0 25%;
+        padding-left: 22.4px; }
+        .sc-cookies__buttons button {
+          width: 100%;
+          margin-bottom: 22.4px; } }
+
+.sc-navigation {
+  top: 0;
+  left: 0;
+  min-height: 240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #7aa0a8; }
+  .sc-navigation .sc-modal__title {
+    color: #dde7e9; }
+  .sc-navigation .sc-modal__image {
+    position: static;
+    opacity: 1; }
+  .sc-navigation a {
+    color: #dde7e9;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    padding: 5.6px 11.2px;
+    text-decoration: none; }
+    .sc-navigation a:focus, .sc-navigation a:hover {
+      background-color: #5b828b; }
+    .sc-navigation a:first-of-type {
+      padding-left: 0; }
