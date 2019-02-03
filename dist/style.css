@@ -147,8 +147,12 @@
   .sc-newsletter .sc-modal__title {
     margin-bottom: 22.4px; }
   .sc-newsletter .sc-modal__image {
-    height: auto;
+    height: 50%;
     width: 100%; }
+    @media screen and (min-width: 900px) {
+      .sc-newsletter .sc-modal__image {
+        height: 100%;
+        width: 50%; } }
   @media screen and (min-width: 900px) {
     .sc-newsletter {
       width: 50%; } }

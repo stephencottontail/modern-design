@@ -219,8 +219,13 @@
     }
 
     .sc-modal__image {
-        height: auto;
+        height: 50%;
         width: 100%;
+
+        @media #{$medium} {
+            height: 100%;
+            width: 50%;
+        }
     }
 
     @media #{$medium} {
