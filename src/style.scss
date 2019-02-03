@@ -1,5 +1,59 @@
 @import "_variables";
 
+.sc-modal {
+    position: fixed;
+    background-color: $gray-100;
+    color: $gray-500;
+    font-family: $sans;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    padding: $base-spacing;
+    text-rendering: optimizeLegibility;
+    z-index: 9999999;
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 220px;
+        width: 220px;
+        opacity: 0.5;
+        z-index: -5;
+    }
+
+    p {
+        margin: 0 0 $base-spacing 0;
+    }
+}
+
+.sc-cookies {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    @media #{$medium} {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .sc-modal__image {
+            position: static;
+            opacity: 1;
+        }
+
+        &__buttons {
+            flex: 1 0 25%;
+            padding-left: $base-spacing;
+
+            button {
+                width: 100%;
+                margin-bottom: $base-spacing;
+            }
+        }
+    }
+}
+
 .sc-navigation {
     background-color: $blue;
     font-family: $sans;

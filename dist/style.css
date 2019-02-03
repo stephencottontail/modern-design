@@ -1,3 +1,44 @@
+.sc-modal {
+  position: fixed;
+  background-color: whitesmoke;
+  color: #433d3d;
+  font-family: "Poppins";
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 22.4px;
+  text-rendering: optimizeLegibility;
+  z-index: 9999999; }
+  .sc-modal__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 220px;
+    width: 220px;
+    opacity: 0.5;
+    z-index: -5; }
+  .sc-modal p {
+    margin: 0 0 22.4px 0; }
+
+.sc-cookies {
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+  @media screen and (min-width: 900px) {
+    .sc-cookies {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      .sc-cookies .sc-modal__image {
+        position: static;
+        opacity: 1; }
+      .sc-cookies__buttons {
+        flex: 1 0 25%;
+        padding-left: 22.4px; }
+        .sc-cookies__buttons button {
+          width: 100%;
+          margin-bottom: 22.4px; } }
+
 .sc-navigation {
   background-color: #7aa0a8;
   font-family: "Poppins";
@@ -14,21 +55,6 @@
       background-color: #5b828b; }
     .sc-navigation a:first-of-type {
       padding-left: 0; }
-
-.sc-test {
-  background-color: whitesmoke;
-  color: #433d3d;
-  font-family: "Poppins";
-  font-size: 16px;
-  line-height: 1.4;
-  padding: 22.4px; }
-
-.sc-button-wrapper {
-  display: flex;
-  flex-wrap: no-wrap;
-  justify-content: space-between;
-  width: 75%;
-  margin: 11.2px 0; }
 
 .sc-button {
   border-width: 2px;
@@ -74,29 +100,3 @@
       color: #7aa0a8; }
     .sc-button__tertiary--red {
       color: #892a32; }
-
-.sc-gray-wrapper {
-  background-color: whitesmoke;
-  color: #433d3d;
-  padding: 22.4px; }
-
-.sc-gray {
-  display: flex;
-  flex-wrap: no-wrap;
-  justify-content: space-between;
-  width: 75%; }
-
-.sc-gray-sample {
-  flex: 0 0 32px;
-  height: 32px;
-  border: 1px solid #433d3d; }
-  .sc-gray-sample__100 {
-    background-color: whitesmoke; }
-  .sc-gray-sample__200 {
-    background-color: #dbd7d7; }
-  .sc-gray-sample__300 {
-    background-color: #928787; }
-  .sc-gray-sample__400 {
-    background-color: #786d6d; }
-  .sc-gray-sample__500 {
-    background-color: #433d3d; }
